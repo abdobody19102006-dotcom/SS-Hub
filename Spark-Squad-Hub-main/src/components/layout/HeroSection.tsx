@@ -1,4 +1,6 @@
-import { Radio, ArrowRight, Cpu, Gamepad2, FileText } from 'lucide-react'
+import { ArrowRight, Cpu, Gamepad2, FileText } from 'lucide-react'
+
+const LOGO = '/logo-icon.png'
 
 export function HeroSection() {
   const scrollTo = (id: string) => {
@@ -11,11 +13,14 @@ export function HeroSection() {
       <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-gold-500/5 rounded-full blur-3xl" />
 
       <div className="relative max-w-6xl mx-auto px-4 md:px-8 py-20">
-        <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-navy-800/50 border border-navy-600 mb-6">
-          <span className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse" />
-          <span className="text-xs font-mono uppercase tracking-wider text-slate-400">
-            Student Engineering Research Project
-          </span>
+        <div className="flex items-center gap-3 mb-6">
+          <img src={LOGO} alt="Spark Squad" className="w-12 h-12 rounded-xl" />
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-navy-800/50 border border-navy-600">
+            <span className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse" />
+            <span className="text-xs font-mono uppercase tracking-wider text-slate-400">
+              Student Engineering Research Project
+            </span>
+          </div>
         </div>
 
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white tracking-tight text-balance leading-tight">
